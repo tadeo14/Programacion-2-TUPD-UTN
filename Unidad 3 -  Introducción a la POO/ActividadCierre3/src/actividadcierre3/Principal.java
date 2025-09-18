@@ -14,7 +14,18 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Estudiante Carlos = new Estudiante();
+        
+        Carlos.nombre = "Carlos";
+        Carlos.apellido = "Aranda";
+        Carlos.curso = "5A";
+        Carlos.calificacion = 4;
+        
+        Carlos.mostrarInfo();
+        Carlos.bajarCalificacion();
+        Carlos.subirCalificacion();      
+        
+        
     }
     
 }
