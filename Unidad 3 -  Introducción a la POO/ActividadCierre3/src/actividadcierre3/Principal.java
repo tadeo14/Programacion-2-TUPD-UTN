@@ -75,6 +75,24 @@ public class Principal {
         g1.mostrarEstado();
         g2.mostrarEstado();
         */
+       
+       // Crear nave
+        NaveEspacial nave = new NaveEspacial();
+        nave.nombre = "Apolo";
+        nave.combustible = 50;
+
+        // Intentar avanzar sin recargar
+        nave.avanzar(15); // debería fallar
+
+        // Recargar
+        nave.recargarCombustible(30);
+
+        // Avanzar correctamente
+        nave.despegar();
+        nave.avanzar(10);
+
+        // Mostrar estado final
+        nave.mostrarEstado();
         
         
         
