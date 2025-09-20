@@ -25,7 +25,16 @@ public class Principal {
         Carlos.bajarCalificacion();
         Carlos.subirCalificacion();      
         
+        Mascotas Oliva = new Mascotas();
         
-    }
+        Oliva.nombre = "Oliva";
+        Oliva.especie = "Perro";
+        Oliva.edad = 5;
+        
+        Oliva.mostrarInfo();
+        Oliva.cumplirAnios();
+        
+        
+        }
     
 }
