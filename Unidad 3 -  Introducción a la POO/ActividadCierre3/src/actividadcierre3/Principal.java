@@ -14,7 +14,7 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Estudiante Carlos = new Estudiante();
+       /* Estudiante Carlos = new Estudiante();
         
         Carlos.nombre = "Carlos";
         Carlos.apellido = "Aranda";
@@ -33,7 +33,24 @@ public class Principal {
         
         Oliva.mostrarInfo();
         Oliva.cumplirAnios();
+        */
+         // Crear un libro
+        Libro libro1 = new Libro();
         
+        // Usamos setters para asignar valores
+        libro1.setTitulo("Cien Años de Soledad");
+        libro1.setAutor("Gabriel García Márquez");
+        libro1.añoPublicacion(1967);
+        
+        
+        // Intentar modificar el año con un valor inválido
+        libro1.añoPublicacion(-50); // inválido
+
+        // Intentar modificar el año con un valor válido
+        libro1.añoPublicacion(1985); // válido
+
+        // Mostrar información final
+        libro1.mostrarInfo();
         
         }
     
