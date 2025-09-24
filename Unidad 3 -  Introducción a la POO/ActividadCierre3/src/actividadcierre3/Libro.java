@@ -37,7 +37,7 @@ public class Libro {
     }
 
     // Setter con validación para añoPublicacion
-    public void setAñoPublicacion(int añoPublicacion) {
+    public void añoPublicacion(int añoPublicacion) {
         if (añoPublicacion > 0 && añoPublicacion <= 2025) { // validación simple
             this.añoPublicacion = añoPublicacion;
         } else {
