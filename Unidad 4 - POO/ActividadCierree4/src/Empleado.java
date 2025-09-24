@@ -50,5 +50,57 @@ public class Empleado {
         this.salario += aumento;
     }
     
-    
+    // b) recibe cantidad fija a aumentar (ej: 2500.50)
+    public void actualizarSalario(double cantidad) {
+        if (cantidad <= 0) return;
+        this.salario += cantidad;
+    }
+
+    // Getters y Setters (encapsulamiento)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) { 
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPuesto() {
+        return puesto;
+    }
+
+    public void setPuesto(String puesto) {
+        this.puesto = puesto;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        if (salario >= 0) {
+            this.salario = salario;
+        }
+    }
+
+    // Método estático para mostrar total de empleados
+    public static int mostrarTotalEmpleados() {
+        return totalEmpleados;
+    }
+
+    // toString para representación legible
+    @Override
+    public String toString() {
+        return String.format("Empleado { id: %d, nombre: %s, puesto: %s, salario: %.2f }",
+                id, nombre, puesto, salario);
+    }
 }
+
