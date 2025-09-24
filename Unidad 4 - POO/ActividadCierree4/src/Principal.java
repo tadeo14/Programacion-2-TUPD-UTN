@@ -10,4 +10,18 @@
  */
 public class Principal {
     
+    public static void main(String[] args) {
+    
+    // Instanciando usando constructor completo
+        Empleado e1 = new Empleado(10, "Ana García", "Analista", 55000.0);
+        Empleado e2 = new Empleado(11, "Juan Pérez", "Desarrollador", 72000.0);
+    
+    
+    
+    
+    
+    
+    }
+    
+    
 }
