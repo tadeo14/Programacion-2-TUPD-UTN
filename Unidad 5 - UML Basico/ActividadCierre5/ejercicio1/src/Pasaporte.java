@@ -8,41 +8,54 @@
  * @author Tadeo
  */
 public class Pasaporte {
-        private String numero;
-        private Foto foto;
-        private Titular titular;
+    // Atributos privados
+    private String numero;   // Número único del pasaporte
+    private Foto foto;       // Foto asociada al pasaporte (composición)
+    private Titular titular; // Titular al que pertenece este pasaporte
 
-        public Pasaporte(String numero, String urlFoto) {
-            this.numero = numero;
-            this.foto = new Foto(urlFoto);
-        }
-        
-        public Pasaporte(String numero) {
-            this.numero = numero;
-        }
-        
-        public void setTitular(Titular titular) {
-            this.titular = titular;
-            if (titular != null && titular.getPasaporte() != this) {
-                titular.setPasaporte(this);
-            }
-        }    
-        public String getNumero() {
-            return numero;
-        }
-        public Titular getTitular() {
-            return titular;
-        }
-
-        public Foto getFoto() {
-            return foto;
-        }
-
-        
-        public void mostrar() {
-            System.out.println("Pasaporte: " + numero + " - Foto: " +
-            foto.getUrl());
+    // Constructor: recibe número y URL de la foto
+    public Pasaporte(String numero, String urlFoto) {
+        this.numero = numero;
+        this.foto = new Foto(urlFoto); // Se crea el objeto Foto automáticamente
     }
+
+    // Constructor alternativo: solo recibe número (sin foto)
+    public Pasaporte(String numero) {
+        this.numero = numero;
+    }
+
+    // Asigna un titular al pasaporte (relación bidireccional con Titular)
+    public void setTitular(Titular titular) {
+        this.titular = titular;
+
+        // Si el titular aún no está asociado a este pasaporte,
+        // se corrige la relación llamando a setPasaporte en Titular
+        if (titular != null && titular.getPasaporte() != this) {
+            titular.setPasaporte(this);
+        }
+    }
+
+    // Devuelve el número del pasaporte
+    public String getNumero() {
+        return numero;
+    }
+
+    // Devuelve el titular asociado al pasaporte
+    public Titular getTitular() {
+        return titular;
+    }
+
+    // Devuelve la foto asociada al pasaporte
+    public Foto getFoto() {
+        return foto;
+    }
+
+    // Muestra la información del pasaporte en consola
+    public void mostrar() {
+        System.out.println("Pasaporte: " + numero +
+                           " - Foto: " + (foto != null ? foto.getUrl() : "Sin foto"));
+    }
+
 }
 
 

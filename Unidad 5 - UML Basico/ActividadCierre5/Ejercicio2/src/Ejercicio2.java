@@ -12,8 +12,12 @@ public class Ejercicio2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+     public static void main(String[] args) {
+        Bateria bate1 = new Bateria("rgtx25", "4000 mAh");
+        Celular celu1 = new Celular("552458", "SAMSUNG", "A24", bate1);
+
+        
+        celu1.mostrar();
     }
     
 }
