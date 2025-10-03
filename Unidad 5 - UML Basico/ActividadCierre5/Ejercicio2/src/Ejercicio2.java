@@ -21,7 +21,7 @@ public class Ejercicio2 {
         celu1.setUsuario(user1);
         
 
-        
+        //Mostrar la info
         celu1.mostrar();
     }
     
