@@ -13,8 +13,13 @@ public class Ejercicio2 {
      * @param args the command line arguments
      */
      public static void main(String[] args) {
+        Usuario user1 = new Usuario ("Gabriel", "417295534");
         Bateria bate1 = new Bateria("rgtx25", "4000 mAh");
         Celular celu1 = new Celular("552458", "SAMSUNG", "A24", bate1);
+        
+        // Relacionar el usuario con el celular
+        celu1.setUsuario(user1);
+        
 
         
         celu1.mostrar();
