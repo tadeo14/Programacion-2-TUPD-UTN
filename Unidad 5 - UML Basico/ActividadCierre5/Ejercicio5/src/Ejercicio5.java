@@ -13,7 +13,14 @@ public class Ejercicio5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        Propietario propietario = new Propietario ("Oscar","4525546");
+        Computadora computadora = new Computadora("A154211-5", "Samnsung","gx1050","Z790");
+        
+        
+        computadora.setPropietario(propietario); // Solo un setter necesario
+        
+        
+        computadora.mostrar();
+     }
     
 }
