@@ -17,11 +17,16 @@ public class Ejercicio4 {
     public static void main(String[] args) {
         Cliente cliente1 = new Cliente ("Oscar","4525546");
         TarjetaDeCredito tarjeta = new TarjetaDeCredito ("1234-5678-9876-5432", LocalDate.of(2026, 12, 31));
+        Banco macro = new Banco("Macro", "3071585659" );
+        
         
         tarjeta.setCliente(cliente1); // Solo un setter necesario
         
         
-        
+        System.out.println("Titular: " + cliente1.getNombre());
+        System.out.println("Numero tarjeta: " +
+        tarjeta.getNumero()+"\n" +  "Fecha vencimiento: " + tarjeta.getFechaVencimiento());
+        macro.mostrar();
     }
     
 }
