@@ -13,8 +13,14 @@ public class Ejercicio8 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+     public static void main(String[] args) {
+        Usuario usuario1 = new Usuario("Laura Gómez", "laura@example.com");
+        Documento doc1 = new Documento("Contrato", "Contenido del contrato de servicios...");
+
+        doc1.firmarDocumento("ABC123XYZ", "2025-10-11", usuario1);
+
+        System.out.println("=== Datos del Documento ===");
+        doc1.mostrar();
     }
     
 }
