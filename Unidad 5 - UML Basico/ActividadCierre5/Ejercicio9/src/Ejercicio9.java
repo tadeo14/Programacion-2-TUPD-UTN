@@ -13,7 +13,15 @@ public class Ejercicio9 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Crear paciente y profesional
+        Paciente paciente1 = new Paciente("María López", "OSDE");
+        Profesional profesional1 = new Profesional("Dr. Ricardo Díaz", "Cardiología");
+
+        // Crear cita médica
+        CitaMedica cita1 = new CitaMedica("2025-10-15", "09:30", paciente1, profesional1);
+
+        System.out.println("=== Detalle de la Cita Médica ===");
+        cita1.mostrar();
     }
     
 }

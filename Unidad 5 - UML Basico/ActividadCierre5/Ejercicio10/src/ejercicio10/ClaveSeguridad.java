@@ -8,6 +8,18 @@ package ejercicio10;
  *
  * @author Tadeo
  */
+// Clase ClaveSeguridad: forma parte de una composición con CuentaBancaria
 public class ClaveSeguridad {
-    
+    private String codigo;
+    private String ultimaModificacion;
+
+    public ClaveSeguridad(String codigo, String ultimaModificacion) {
+        this.codigo = codigo;
+        this.ultimaModificacion = ultimaModificacion;
+    }
+
+    public void mostrar() {
+        System.out.println("Clave de Seguridad - Código: " + codigo + ", Última modificación: " + ultimaModificacion);
+    }
 }
+

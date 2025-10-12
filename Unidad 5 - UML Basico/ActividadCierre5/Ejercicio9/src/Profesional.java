@@ -7,6 +7,17 @@
  *
  * @author Tadeo
  */
+// Clase Profesional: representa al médico o profesional de la salud.
 public class Profesional {
-    
+    private String nombre;
+    private String especialidad;
+
+    public Profesional(String nombre, String especialidad) {
+        this.nombre = nombre;
+        this.especialidad = especialidad;
+    }
+
+    public void mostrar() {
+        System.out.println("Profesional: " + nombre + " - Especialidad: " + especialidad);
+    }
 }

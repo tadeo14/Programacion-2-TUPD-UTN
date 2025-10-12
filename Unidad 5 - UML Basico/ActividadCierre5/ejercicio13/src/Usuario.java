@@ -7,17 +7,16 @@
  *
  * @author Tadeo
  */
-// Clase Paciente: representa a una persona que asiste a una cita médica.
-public class Paciente {
+public class Usuario {
     private String nombre;
-    private String obraSocial;
+    private String email;
 
-    public Paciente(String nombre, String obraSocial) {
+    public Usuario(String nombre, String email) {
         this.nombre = nombre;
-        this.obraSocial = obraSocial;
+        this.email = email;
     }
 
     public void mostrar() {
-        System.out.println("Paciente: " + nombre + " - Obra Social: " + obraSocial);
+        System.out.println("Usuario: " + nombre + " - Email: " + email);
     }
 }
